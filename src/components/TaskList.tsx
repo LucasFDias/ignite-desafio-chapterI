@@ -1,6 +1,4 @@
-import { useState } from 'react'
-
-import cuid from 'cuid';
+import { useState } from 'react' 
 
 import '../styles/tasklist.scss'
 
@@ -18,6 +16,7 @@ export function TaskList() {
 
   function handleCreateNewTask() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+
     if(!newTaskTitle) return;
 
     const newTask = {
@@ -57,7 +56,7 @@ export function TaskList() {
         <div className="input-group">
           <input 
             type="text" 
-            placeholder="Adicionar nova task" 
+            placeholder="Adicionar novo todo" 
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
           />
